@@ -1,8 +1,6 @@
-FROM debian:buster
+FROM debian:bullseye
 
 MAINTAINER Danilo Diaz "danilo.diaz@britecore.com"
-
-RUN echo "deb http://archive.debian.org/debian stretch main" > /etc/apt/sources.list
 
 RUN apt-get update && \
     apt-get install -y exim4-daemon-light && \
