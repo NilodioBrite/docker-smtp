@@ -2,9 +2,7 @@ FROM debian:buster
 
 MAINTAINER Danilo Diaz "danilo.diaz@britecore.com"
 
-RUN sed -i -e 's/deb.debian.org/archive.debian.org/g' \
-           -e 's|security.debian.org|archive.debian.org/|g' \
-           -e '/stretch-updates/d' /etc/apt/sources.list
+RUN echo "deb http://archive.debian.org/debian stretch main" > /etc/apt/sources.list
 
 RUN apt-get update && \
     apt-get install -y exim4-daemon-light && \
