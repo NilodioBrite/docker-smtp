@@ -1,4 +1,4 @@
-FROM --platform=linux/x86_64 debian:buster
+FROM debian:buster
 
 MAINTAINER Danilo Diaz "danilo.diaz@britecore.com"
 
